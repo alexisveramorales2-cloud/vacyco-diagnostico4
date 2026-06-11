@@ -1,15 +1,15 @@
-```html
+```html id="0n6n0z"
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VACYCO — Valorización Estratégica</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,13 +22,17 @@ box-sizing:border-box;
 :root{
 
 --verde:#92d050;
---petroleo:#0b1720;
---petroleo2:#111f2a;
+--petroleo:#081018;
+--petroleo2:#101c27;
 --gris:#9ca3af;
 --gris2:#d1d5db;
 --blanco:#ffffff;
 --negro:#000000;
 
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -38,8 +42,8 @@ font-family:'Montserrat',sans-serif;
 background:
 linear-gradient(
 180deg,
-#05080c 0%,
-#0b1720 100%
+#040608 0%,
+#081018 100%
 );
 
 color:white;
@@ -49,49 +53,53 @@ overflow-x:hidden;
 }
 
 .container{
-
 width:100%;
 min-height:100vh;
-
 }
 
 .header{
 
-padding:22px 24px;
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+padding:20px 24px;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-position:fixed;
-top:0;
-left:0;
-width:100%;
+z-index:999;
 
-z-index:100;
-
-background:rgba(5,8,12,.72);
+background:rgba(0,0,0,.45);
 
 backdrop-filter:blur(12px);
 
-border-bottom:1px solid rgba(255,255,255,.06);
+border-bottom:1px solid rgba(255,255,255,.05);
 
 }
 
 .logo{
 
-font-size:13px;
-font-weight:700;
+font-size:12px;
+font-weight:800;
+
 letter-spacing:4px;
 
 color:white;
 
 }
 
-.header-contact{
+.header-text{
 
 font-size:11px;
-color:var(--gris);
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#95a1ad;
 
 }
 
@@ -104,34 +112,36 @@ height:100vh;
 display:flex;
 align-items:flex-end;
 
-padding:120px 24px 60px;
+padding:120px 24px 70px;
 
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,.92),
-rgba(0,0,0,.3)
+rgba(0,0,0,.96),
+rgba(0,0,0,.2)
 ),
 
-url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat;
 
 }
 
 .hero-content{
 
-max-width:680px;
+max-width:720px;
 
 }
 
 .hero-tag{
 
 font-size:12px;
+
 letter-spacing:3px;
+
 text-transform:uppercase;
 
 color:var(--verde);
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 font-weight:700;
 
@@ -139,13 +149,13 @@ font-weight:700;
 
 .hero h1{
 
-font-size:clamp(48px,10vw,100px);
+font-size:clamp(58px,10vw,120px);
 
-line-height:.88;
+line-height:.82;
 
 font-weight:900;
 
-letter-spacing:-4px;
+letter-spacing:-5px;
 
 text-transform:uppercase;
 
@@ -158,9 +168,10 @@ margin-bottom:24px;
 max-width:560px;
 
 font-size:15px;
+
 line-height:1.8;
 
-color:#d7d7d7;
+color:#d1d5db;
 
 margin-bottom:34px;
 
@@ -169,26 +180,27 @@ margin-bottom:34px;
 .hero-button{
 
 display:inline-flex;
-align-items:center;
-justify-content:center;
 
-padding:18px 30px;
+justify-content:center;
+align-items:center;
+
+padding:18px 32px;
+
+border-radius:16px;
 
 background:var(--verde);
 
 color:black;
 
-font-weight:700;
-
-text-decoration:none;
-
-border-radius:14px;
-
 font-size:13px;
+
+font-weight:800;
 
 letter-spacing:1px;
 
 text-transform:uppercase;
+
+text-decoration:none;
 
 transition:.3s;
 
@@ -198,29 +210,31 @@ transition:.3s;
 
 transform:translateY(-2px);
 
-box-shadow:0 10px 30px rgba(146,208,80,.25);
+box-shadow:0 16px 30px rgba(146,208,80,.22);
 
 }
 
 .section{
 
-padding:80px 24px;
-
-max-width:1100px;
+max-width:1180px;
 
 margin:auto;
 
+padding:100px 24px;
+
 }
 
-.section-title{
+.section-tag{
 
-font-size:14px;
+font-size:12px;
+
 letter-spacing:3px;
+
 text-transform:uppercase;
 
 color:var(--verde);
 
-margin-bottom:20px;
+margin-bottom:18px;
 
 font-weight:700;
 
@@ -228,41 +242,41 @@ font-weight:700;
 
 .section h2{
 
-font-size:clamp(34px,6vw,60px);
+font-size:clamp(36px,6vw,72px);
 
-line-height:.95;
+line-height:.92;
 
 font-weight:900;
 
 letter-spacing:-3px;
 
-margin-bottom:24px;
-
 text-transform:uppercase;
+
+margin-bottom:24px;
 
 }
 
 .section-description{
 
-max-width:720px;
-
-color:#b5b5b5;
-
-line-height:1.8;
-
-margin-bottom:50px;
+max-width:760px;
 
 font-size:15px;
 
+line-height:1.8;
+
+color:#b5bec8;
+
+margin-bottom:50px;
+
 }
 
-.form-wrapper{
+.layout{
 
 display:grid;
 
 grid-template-columns:1fr 1fr;
 
-gap:40px;
+gap:34px;
 
 align-items:start;
 
@@ -274,32 +288,32 @@ background:
 linear-gradient(
 180deg,
 rgba(255,255,255,.03),
-rgba(255,255,255,.02)
+rgba(255,255,255,.015)
 );
 
-border:1px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.06);
 
-padding:32px;
+padding:34px;
 
-border-radius:28px;
+border-radius:30px;
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 
 }
 
 .card-title{
 
-font-size:13px;
+font-size:12px;
 
 letter-spacing:2px;
 
 text-transform:uppercase;
 
+font-weight:700;
+
 color:var(--verde);
 
-margin-bottom:20px;
-
-font-weight:700;
+margin-bottom:24px;
 
 }
 
@@ -313,15 +327,15 @@ label{
 
 display:block;
 
-font-size:12px;
-
-margin-bottom:10px;
+font-size:11px;
 
 letter-spacing:1px;
 
 text-transform:uppercase;
 
 font-weight:700;
+
+margin-bottom:10px;
 
 color:#d1d5db;
 
@@ -335,11 +349,11 @@ width:100%;
 
 padding:16px;
 
-background:#101923;
+border-radius:16px;
+
+background:#0f1720;
 
 border:1px solid rgba(255,255,255,.08);
-
-border-radius:14px;
 
 color:white;
 
@@ -385,15 +399,15 @@ background:var(--verde);
 
 color:black;
 
-font-weight:800;
-
 font-size:13px;
+
+font-weight:800;
 
 letter-spacing:1px;
 
-cursor:pointer;
-
 text-transform:uppercase;
+
+cursor:pointer;
 
 transition:.3s;
 
@@ -403,7 +417,33 @@ button:hover{
 
 transform:translateY(-2px);
 
-box-shadow:0 12px 30px rgba(146,208,80,.2);
+box-shadow:0 16px 30px rgba(146,208,80,.22);
+
+}
+
+.loading{
+
+display:none;
+
+text-align:center;
+
+padding:60px 20px;
+
+}
+
+.loading p{
+
+margin-bottom:14px;
+
+font-size:14px;
+
+color:#d1d5db;
+
+}
+
+.results{
+
+display:none;
 
 }
 
@@ -413,9 +453,9 @@ display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
-gap:18px;
+gap:16px;
 
-margin-bottom:26px;
+margin-bottom:24px;
 
 }
 
@@ -425,7 +465,7 @@ padding:24px;
 
 border-radius:22px;
 
-background:#101923;
+background:#0f1720;
 
 border:1px solid rgba(255,255,255,.06);
 
@@ -433,13 +473,13 @@ border:1px solid rgba(255,255,255,.06);
 
 .metric-value{
 
-font-size:28px;
+font-size:30px;
 
 font-weight:900;
 
 color:var(--verde);
 
-margin-bottom:8px;
+margin-bottom:10px;
 
 }
 
@@ -470,13 +510,13 @@ rgba(12,192,223,.04)
 
 border:1px solid rgba(146,208,80,.12);
 
-margin-top:24px;
+margin-bottom:24px;
 
 }
 
 .recommendation h3{
 
-font-size:14px;
+font-size:12px;
 
 letter-spacing:2px;
 
@@ -490,31 +530,31 @@ color:var(--verde);
 
 .recommendation p{
 
+font-size:14px;
+
 line-height:1.8;
 
-color:#d8d8d8;
-
-font-size:14px;
+color:#d1d5db;
 
 }
 
 .opportunities{
 
-margin-top:24px;
-
 padding:28px;
 
 border-radius:24px;
 
-background:#101923;
+background:#0f1720;
 
 border:1px solid rgba(255,255,255,.06);
+
+margin-bottom:24px;
 
 }
 
 .opportunities h4{
 
-font-size:13px;
+font-size:12px;
 
 letter-spacing:2px;
 
@@ -532,11 +572,11 @@ list-style:none;
 
 margin-bottom:14px;
 
-line-height:1.6;
-
-color:#d8d8d8;
-
 font-size:14px;
+
+line-height:1.7;
+
+color:#d1d5db;
 
 }
 
@@ -552,15 +592,50 @@ font-weight:700;
 
 }
 
+.whatsapp-btn{
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+padding:18px;
+
+border-radius:18px;
+
+background:var(--verde);
+
+color:black;
+
+text-decoration:none;
+
+font-size:13px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+margin-bottom:24px;
+
+transition:.3s;
+
+}
+
+.whatsapp-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
 .contact-box{
 
-margin-top:24px;
+padding:28px;
 
-padding:26px;
+border-radius:24px;
 
-border-radius:22px;
-
-background:#101923;
+background:#0f1720;
 
 border:1px solid rgba(255,255,255,.06);
 
@@ -568,11 +643,11 @@ border:1px solid rgba(255,255,255,.06);
 
 .contact-box p{
 
-margin-bottom:12px;
+margin-bottom:14px;
 
 font-size:14px;
 
-color:#d8d8d8;
+color:#d1d5db;
 
 }
 
@@ -586,91 +661,61 @@ font-weight:700;
 
 }
 
-.whatsapp-cta{
+.success{
 
-display:flex;
+display:none;
 
-justify-content:center;
-align-items:center;
-
-margin-top:24px;
+margin-top:20px;
 
 padding:18px;
 
 border-radius:18px;
 
-background:var(--verde);
+background:rgba(146,208,80,.08);
 
-color:black;
-
-font-weight:800;
-
-text-decoration:none;
+border:1px solid rgba(146,208,80,.15);
 
 font-size:13px;
 
-letter-spacing:1px;
+line-height:1.7;
 
-text-transform:uppercase;
-
-transition:.3s;
-
-}
-
-.whatsapp-cta:hover{
-
-transform:translateY(-2px);
-
-}
-
-.results{
-
-display:none;
+color:#d1d5db;
 
 }
 
 .footer{
 
-padding:60px 24px;
+padding:70px 24px;
 
 text-align:center;
 
-color:#8a8a8a;
-
 font-size:12px;
+
+color:#7f8b96;
 
 border-top:1px solid rgba(255,255,255,.06);
 
-margin-top:80px;
+margin-top:60px;
 
 }
 
 @media(max-width:900px){
 
-.form-wrapper{
-
+.layout{
 grid-template-columns:1fr;
-
 }
 
 .hero{
-
 height:auto;
-
 min-height:100vh;
-
 }
 
 .hero h1{
-
 letter-spacing:-2px;
-
 }
 
 .metrics{
-
 grid-template-columns:1fr;
-
 }
 
 }
@@ -689,7 +734,7 @@ grid-template-columns:1fr;
 VACYCO
 </div>
 
-<div class="header-contact">
+<div class="header-text">
 ACTIVOS PRODUCTIVOS
 </div>
 
@@ -722,7 +767,7 @@ REALIZAR DIAGNÓSTICO
 
 <section class="section" id="diagnostico">
 
-<div class="section-title">
+<div class="section-tag">
 DIAGNÓSTICO ESTRATÉGICO
 </div>
 
@@ -731,10 +776,10 @@ Tu terreno puede producir mucho más
 </h2>
 
 <p class="section-description">
-Analizamos el potencial de monetización, valorización y escalabilidad de tu terreno utilizando criterios de arquitectura estratégica, hospitalidad experiencial y expansión productiva.
+Analizamos el potencial de monetización, valorización y escalabilidad de tu terreno mediante criterios de arquitectura estratégica, hospitalidad experiencial y expansión modular premium.
 </p>
 
-<div class="form-wrapper">
+<div class="layout">
 
 <div class="card">
 
@@ -812,11 +857,25 @@ INFORMACIÓN DEL PROYECTO
 GENERAR DIAGNÓSTICO
 </button>
 
+<div class="success" id="success">
+Diagnóstico enviado correctamente. Tu información fue registrada en VACYCO.
+</div>
+
 </form>
 
 </div>
 
-<div class="card results" id="results">
+<div class="card">
+
+<div id="loading" class="loading">
+
+<p>Analizando valorización estratégica...</p>
+<p>Calculando potencial de monetización...</p>
+<p>Detectando oportunidades...</p>
+
+</div>
+
+<div id="results" class="results">
 
 <div class="card-title">
 RESULTADO ESTRATÉGICO
@@ -876,7 +935,7 @@ OPORTUNIDADES DETECTADAS
 
 <a
 id="whatsappBtn"
-class="whatsapp-cta"
+class="whatsapp-btn"
 target="_blank">
 
 AGENDAR SESIÓN ESTRATÉGICA
@@ -894,8 +953,8 @@ gerencia.vacyco@gmail.com
 
 <p>
 📱
-<a href="https://wa.me/573146969340" target="_blank">
-+57 314 696 9340
+<a href="https://wa.me/573146969349" target="_blank">
++57 314 696 9349
 </a>
 </p>
 
@@ -919,6 +978,8 @@ TikTok:
 
 </div>
 
+</div>
+
 </section>
 
 <footer class="footer">
@@ -931,9 +992,15 @@ VACYCO — Arquitectura estratégica y monetización de activos productivos.
 
 <script>
 
+const scriptURL='https://script.google.com/macros/s/AKfycby7Afb1vU2r56jsrNELJsXTzZrw4jDsaFsMNXuK2_pRCdLNDQjE43QUjPBXrNTYCkfg1Q/exec';
+
 const form=document.getElementById('diagnostic-form');
 
+const loading=document.getElementById('loading');
+
 const results=document.getElementById('results');
+
+const success=document.getElementById('success');
 
 const data={
 
@@ -1029,22 +1096,59 @@ opp:[
 
 };
 
-form.addEventListener('submit',function(e){
+form.addEventListener('submit',async function(e){
 
 e.preventDefault();
 
-const entorno=document.getElementById('entorno').value;
+loading.style.display='block';
 
-const r=data[entorno];
+results.style.display='none';
+
+const payload={
+
+nombre:document.getElementById('nombre').value,
+email:document.getElementById('email').value,
+whatsapp:document.getElementById('whatsapp').value,
+ubicacion:document.getElementById('ubicacion').value,
+area:document.getElementById('area').value,
+entorno:document.getElementById('entorno').value,
+objetivo:document.getElementById('objetivo').value,
+contexto:document.getElementById('contexto').value,
+timestamp:new Date().toISOString()
+
+};
+
+try{
+
+await fetch(scriptURL,{
+
+method:'POST',
+
+body:JSON.stringify(payload)
+
+});
+
+success.style.display='block';
+
+}catch(error){
+
+alert('Error enviando datos.');
+
+console.log(error);
+
+}
+
+setTimeout(()=>{
+
+loading.style.display='none';
 
 results.style.display='block';
 
+const r=data[payload.entorno];
+
 document.getElementById('roi').innerText=r.roi;
-
 document.getElementById('retorno').innerText=r.retorno;
-
 document.getElementById('riesgo').innerText=r.riesgo;
-
 document.getElementById('escala').innerText=r.escala;
 
 document.getElementById('recommendacion').innerText=r.rec;
@@ -1061,11 +1165,14 @@ results.scrollIntoView({
 behavior:'smooth'
 });
 
+},2200);
+
 });
 
 </script>
 
 </body>
+
 </html>
 ```
 
