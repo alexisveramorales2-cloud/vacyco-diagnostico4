@@ -835,9 +835,18 @@ INFORMACIÓN DEL PROYECTO
 GENERAR DIAGNÓSTICO
 </button>
 
+```html id="n8x0cy"
 <div class="success" id="success">
-Información enviada correctamente.
+
+<strong>DIAGNÓSTICO GENERADO</strong>
+
+<br><br>
+
+Revisa tu WhatsApp para continuar el proceso estratégico.
+
 </div>
+```
+
 
 </form>
 
@@ -1112,7 +1121,14 @@ body:JSON.stringify(payload)
 
 });
 
+```javascript id="y1i4sz"
 success.style.display='block';
+
+success.scrollIntoView({
+  behavior:'smooth'
+});
+```
+
 
 } catch(error) {
 
